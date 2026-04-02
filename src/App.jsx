@@ -5,8 +5,8 @@ import { Download, Share2, LogOut, Plus, Settings, TrendingUp, Eye, EyeOff } fro
 
 // ============ SUPABASE SETUP ============
 // REPLACE THESE WITH YOUR SUPABASE VALUES
-const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE'; // e.g., https://xxxxx.supabase.co
-const SUPABASE_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE'; // Your anon key
+const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || 'YOUR_SUPABASE_URL';
+const SUPABASE_KEY = process.env.REACT_APP_SUPABASE_KEY || 'YOUR_SUPABASE_ANON_KEY';
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
